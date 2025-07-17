@@ -15,6 +15,9 @@ public:
 // Space complexity: O(1) if we ignore the space used by the sorting algorithm, otherwise O(n) for storing the sorted strings.
 
 // Approach 2: Hash Table
+Explanation:
+We use a hash map to count characters in s and then subtract counts using t. If the final counts of all characters are zero, both strings are anagrams.
+
 
 class Solution {
 public:
@@ -48,6 +51,9 @@ space complexity: O(1) if we consider the character set to be constant (like low
 
 
 Approach 3: Hash Table (Using Array):
+Explanation:
+Instead of a hash map, we use a fixed-size array to track character counts (only lowercase). It is faster and uses less memory when the character set is limited.
+
 
 class Solution {
 public:

@@ -1,4 +1,6 @@
 Brute force:
+Explanation:
+We compare every possible pair in the array to check if any two numbers are the same. If we find any such pair, we return true; otherwise, return false after all checks.
 
 class Solution {
 public:
@@ -21,7 +23,8 @@ TLE
 
 Approach using Sorting:
 
-
+Explanation:
+Sorting the array makes any duplicates appear next to each other. We simply check if any adjacent elements are equal.
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
@@ -43,7 +46,8 @@ space complexity: O(1)
 
 
 Approach using Hash set:
-
+Explanation:
+We use a hash set to store elements as we iterate. If we find a number already in the set, it means we've seen it before → its a duplicate
 
 class Solution {
 public:
@@ -64,6 +68,9 @@ space complexity: O(n);
 
 
 Approach using hash map:
+// Explanation:
+We use a hash map to keep count of how many times each number appears. If any number appears more than once, its a duplicate.
+
 
 class Solution {
 public:
