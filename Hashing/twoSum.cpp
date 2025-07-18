@@ -17,7 +17,7 @@ public:
         }
         return ans; // Return an empty vector if no pair is found
     }
-};
+}; 
 
 // Explanation:
 // We use an unordered_map to store each number and its index as we iterate through the nums
