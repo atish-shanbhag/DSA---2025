@@ -24,8 +24,8 @@ public:
     bool isAnagram(string s, string t) {
         unordered_map<char,int> count;
 
-        for(auto x : s){
-            count[x]++;
+        for(auto x : s){ // Count characters in s
+            count[x]++;  // Increment count for each character in s
         }
 
 
@@ -60,16 +60,18 @@ public:
     bool isAnagram(string s, string t) {
         int count[26] = {0}; // Assuming only lowercase English letters
 
-        for(char x: s){
-            count[x - 'a']++;
+        for(char x: s){ // Count characters in s
+            count[x - 'a']++; // Increment count for each character in s
         }
 
 
         for(char x: t){
-            count[x - 'a']--;
+            count[x - 'a']--; // Decrement count for each character in t    
         }
 
-        for(int val : count){
+        for(int val : count){ // Check if all counts are zero 
+            // If any count is not zero, the strings are not anagrams
+            // If the count is zero, it means the character appeared equally in both strings
             if(val != 0){
                 return false;
             }
